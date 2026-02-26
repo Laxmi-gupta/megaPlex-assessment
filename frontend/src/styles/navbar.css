@@ -1,0 +1,36 @@
+.navbar {
+  border-bottom: 1px solid #ddd;
+  background: white;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  height: 60px;
+  width: 80px;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  color: #555;
+}
+
+.nav-links a {
+  cursor: pointer;
+}
+
+.enquiry-btn {
+  background: #95d74a;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: large;
+}

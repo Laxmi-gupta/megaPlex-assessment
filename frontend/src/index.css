@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
