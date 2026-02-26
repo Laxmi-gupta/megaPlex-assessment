@@ -15,9 +15,14 @@ export default function Navbar() {
           <Link to="/floorplan" className="links">Floor Plans</Link>
           <Link to="/developer" className="links">Developer</Link>
           <a>Contact</a>
+          <Link to="/admin/login" className="links">
+            Admin
+          </Link>
         </div>
 
         <button className="enquiry-btn">Enquiry Now</button>
+
+        
       </div>
     </div>
   );

@@ -1,7 +1,28 @@
+import axios from "axios";
 import "../styles/hero.css";
-// import building from "../assets/building.jpg";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
+   const [heroData, setHeroData] = useState({});
+  const [aboutData, setAboutData] = useState({});
+  const URL = import.meta.env.VITE_BACKEND;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const heroRes = await axios.get(`${URL}/api/content/hero`);
+        const aboutRes = await axios.get(`${URL}/api/content/about`);
+
+        setHeroData(heroRes.data || {});
+        setAboutData(aboutRes.data || {});
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="hero">
@@ -22,18 +43,18 @@ export default function Hero() {
 
           <div className="price-section">
             <div className="price-box">
-              <h3>SMART 1 BHK</h3>
-              <p className="original-price">74.99 Lacs</p>
-              <p className="discounted-price">₹ 69.99 Lacs*</p>
+              <h3>{heroData.smartBhkTitle}</h3>
+              <p className="original-price">{heroData.smartBhkOldPrice}</p>
+              <p className="discounted-price">{heroData.smartBhkPrice}</p>
               <span className="onwards">— onwards —</span>
             </div>
 
             <div className="price-divider"></div>
 
             <div className="price-box">
-              <h3>PREMIUM 2 BHK</h3>
-              <p className="original-price">1.05 CR</p>
-              <p className="discounted-price">₹ 96.99 Lacs*</p>
+               <h3>{heroData.premiumBhkTitle}</h3>
+              <p className="original-price">{heroData.premiumBhkOldPrice}</p>
+              <p className="discounted-price">{heroData.premiumBhkPrice}</p>
               <span className="onwards">— onwards —</span>
             </div>
           </div>
@@ -47,8 +68,7 @@ export default function Hero() {
           <div className="address">
             <img src="/placeholder.png" alt="placeholder"  className="pin"/>
             <p>
-              <strong>BLDG. NO. 223/224,</strong><br />
-              CIRCLE - KANNAMWAR NAGAR 1, VIKHROLI (EAST)
+              <strong>{heroData.address}</strong><br />
             </p>
           </div>
         </div>
@@ -58,15 +78,13 @@ export default function Hero() {
           <img src="/about.png" alt="about" className="about-images"/>
 
         <div className="about-content">
-          <h2 className="about-title">About Project</h2>
-          <p className="about-text">
-            At Vighnaharta Enclave, every detail reflects the grandest gesture of life in the most authentic and desirable home. Guided by a humanist approach, the architecture places people at the heart of the space. Built on the foundations of comfort, it evokes a true sense of freedom, protection, and belonging.
-          </p>
-          <p className="about-text">
-            "The moment I entered the house, it felt welcomed" — this feeling defines the privilege Vighnaharta Enclave offers. Thoughtfully designed with crafted amenities and timeless choices, the space resonates with the warmth and authenticity that you and your family truly deserve. It's the place your soul has long been searching for.
-          </p>
+          <h2 className="about-title">{aboutData.title}</h2>
+
+          <p className="about-text">{aboutData.para1}</p>
+          <p className="about-text">{aboutData.para2}</p>
+
           <a href="/brochure.pdf" className="btn-brochure" download>
-            Download Brochure
+            {aboutData.btnText}
           </a>
         </div>
       </div>
