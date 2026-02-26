@@ -7,7 +7,6 @@ const ADMIN_PASSWORD = "1234";
 
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
-  console.log(email,password);
   if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
     return res.json({ success: true });
   }
