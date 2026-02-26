@@ -1,0 +1,170 @@
+.fp-section {
+  background: #c8f0e0;
+  padding: 40px 0 50px;
+}
+
+
+.fp-wing-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.fp-wing-tab {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  color: #555;
+  cursor: pointer;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.fp-wing-tab.active {
+  color: #2a7a4f;
+  border-bottom: 2px solid #2a7a4f;
+  font-weight: 700;
+}
+
+
+.fp-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 32px;
+  max-width: 860px;
+  margin: 0 auto 24px;
+  padding: 0 24px;
+}
+
+/* Floor plan image - standalone white box on the LEFT */
+.fp-image-wrap {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.fp-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* White card on the RIGHT - tabs + info only */
+.fp-card {
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 32px;
+  min-width: 260px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+/* BHK type buttons */
+.fp-type-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.fp-type-btn {
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  background: #d4f0e4;
+  color: #2a7a4f;
+  transition: background 0.2s, color 0.2s;
+}
+
+.fp-type-btn.active {
+  background: #56c97a;
+  color: #fff;
+}
+
+/* Info text */
+.fp-info p {
+  font-size: 14px;
+  color: #333;
+  margin: 4px 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.7;
+}
+
+/* Download button */
+.fp-download-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #56c97a, #a8e063);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Arial', sans-serif;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  align-self: center;
+  transition: opacity 0.2s;
+  justify-content: center;
+}
+
+.fp-download-btn:hover {
+  opacity: 0.88;
+}
+
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.play-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.play-btn:hover {
+  transform: scale(1.08);
+}
+
+.play-btn svg {
+  width: 72px;
+  height: 72px;
+} 

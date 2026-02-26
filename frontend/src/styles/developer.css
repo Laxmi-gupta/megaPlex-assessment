@@ -1,0 +1,223 @@
+
+.dev-section {
+  background: #e8f8f2;
+  padding: 60px 80px 50px;
+  text-align: center;
+}
+
+.dev-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  font-family: 'Georgia', serif;
+  margin-bottom: 16px;
+}
+
+.dev-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 auto 32px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+/* Stats bar */
+.dev-stats {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  background: #c8f0e0;
+  border-radius: 8px;
+  padding: 16px 0;
+  margin-bottom: 32px;
+}
+
+.dev-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 16px;
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+
+.dev-stat:last-child {
+  border-right: none;
+}
+
+.dev-stat-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1a5c35;
+  font-family: 'Georgia', serif;
+}
+
+.dev-stat-label {
+  font-size: 11px;
+  color: #555;
+  font-family: 'Arial', sans-serif;
+  margin-top: 3px;
+  text-align: center;
+}
+
+/* Developer image */
+.dev-img-wrap {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  max-height: 280px;
+  
+}
+
+
+.dev-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ════════════════════════════════
+   CONSTRUCTION UPDATES
+════════════════════════════════ */
+
+.const-section {
+  background: #c8f0e0;
+  padding: 50px 80px;
+  text-align: center;
+}
+
+.const-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+  font-family: 'Georgia', serif;
+  margin-bottom: 28px;
+}
+
+.const-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.const-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 220px;
+}
+
+.const-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.const-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+  padding: 16px 14px 14px;
+  text-align: left;
+  color: #fff;
+}
+
+.const-card-status {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Arial', sans-serif;
+  margin: 0 0 2px;
+}
+
+.const-card-sub {
+  font-size: 12px;
+  font-family: 'Arial', sans-serif;
+  margin: 0 0 6px;
+  opacity: 0.9;
+}
+
+.const-know-more {
+  font-size: 11px;
+  color: #a8f0cc;
+  font-family: 'Arial', sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ════════════════════════════════
+   FAQ
+════════════════════════════════ */
+
+.faq-section {
+  background: #fff;
+  padding: 60px 80px 70px;
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+  font-family: 'Georgia', serif;
+  margin-bottom: 32px;
+}
+
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-item {
+  background: #e4f7ee;
+  border-radius: 6px;
+  padding: 14px 18px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.faq-item:hover {
+  background: #d0f0e0;
+}
+
+.faq-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.faq-q {
+  font-size: 13px;
+  color: #222;
+  font-family: 'Arial', sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.faq-icon {
+  font-size: 20px;
+  color: #2a7a4f;
+  font-weight: 300;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.faq-answer {
+  font-size: 12.5px;
+  color: #555;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.75;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #c0e8d4;
+}

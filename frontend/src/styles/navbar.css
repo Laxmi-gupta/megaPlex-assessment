@@ -22,15 +22,32 @@
   color: #555;
 }
 
-.nav-links a {
+.links {
   cursor: pointer;
+  text-decoration: none;
+  color: #555;
 }
 
 .enquiry-btn {
-  background: #95d74a;
+    background: linear-gradient(0deg, #56c97a, #a8e063);
   border: none;
   padding: 10px 18px;
   border-radius: 5px;
   cursor: pointer;
   font-size: large;
+}
+
+.fp-thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.fp-thumb {
+  width: 80px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background: #f0f0f0;
 }
