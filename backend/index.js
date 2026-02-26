@@ -12,7 +12,7 @@ const app = express();
 // ── Middleware ──
 app.use(express.json());
 app.use(cors({
-  origin: "https://megaplex-assessment.vercel.app/" || process.env.FRONTEND_URL,
+  origin: true,
   credentials: true,
 }));
 
